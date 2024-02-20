@@ -1,0 +1,69 @@
+@host = http://localhost:80
+@personId = 1
+@addressId = 1
+
+### Listar todas as pessoas
+GET {{host}}/api/people
+Content-Type: application/json
+
+### Obter detalhes de uma pessoa específica
+GET {{host}}/api/people/{{personId}}
+Content-Type: application/json
+
+### Criar uma nova pessoa
+POST {{host}}/api/people
+Content-Type: application/json
+Accept: application/json
+{
+  "name": "John Doe",
+  "social_name": "Johnny",
+  "cpf": "12345678901",
+  "father_name": "Father Doe",
+  "mother_name": "Mother Doe",
+  "phone": "1234567890",
+  "email": "john.doe@example.com"
+}
+
+### Atualizar uma pessoa
+PUT {{host}}/api/people/{{personId}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "John Updated Doe",
+  "social_name": "Johnny Updated",
+  "cpf": "12345678901",
+  "father_name": "Father Updated Doe",
+  "mother_name": "Mother Updated Doe",
+  "phone": "0987654321",
+  "email": "updated.john.doe@example.com"
+}
+
+### Deletar uma pessoa
+DELETE {{host}}/api/people/{{personId}}
+Content-Type: application/json
+
+### Adicionar endereço a uma pessoa
+POST {{host}}/api/people/{{personId}}/addresses
+Content-Type: application/json
+Accept: application/json
+
+{
+  "type": "residential",
+  "zipcode": "123456",
+  "street": "Main St",
+  "number": "123",
+  "complement": "Apt 1",
+  "neighborhood": "Central",
+  "state": "SP",
+  "city": "São Paulo"
+}
+
+### obter histórico de endereços de uma pessoa
+GET {{host}}/api/people/{{personId}}/address-history
+Content-Type: application/json
+
+### obter endereço atual de uma pessoa
+GET {{host}}/api/people/{{personId}}/active-address
+Content-Type: application/json
+
