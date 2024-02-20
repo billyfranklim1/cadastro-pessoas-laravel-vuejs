@@ -8,6 +8,12 @@ Antes de começar, certifique-se de ter o Docker 🐳 instalado em sua máquina.
 
 **Importante:** Laravel Sail utiliza a porta `3306` para o MySQL por padrão. Certifique-se de que esta porta esteja disponível 🚦 ou ajuste a configuração conforme necessário.
 
+## DRE - Diagrama de Relacionamento de Entidades 📊
+Abaixo está o diagrama de relacionamento de entidades do projeto:
+<p align="center">
+  <img src="public/dre.svg" alt="DRE - Diagrama de Relacionamento de Entidades" />
+</p>
+
 ## Como Clonar o Projeto 📋
 
 Para clonar o projeto, abra um terminal e execute o seguinte comando:
@@ -52,6 +58,12 @@ Execute as migrações para criar as tabelas no banco de dados 🗃️:
 
 ```bash
 ./vendor/bin/sail artisan migrate
+```
+
+Ou, se preferir, você rodar o dump SQL que está na raiz do projeto:
+    
+```bash
+./vendor/bin/sail mysql -u sail -p -D sail < dump.sql
 ```
 
 ## Como Rodar os Testes 🧪
