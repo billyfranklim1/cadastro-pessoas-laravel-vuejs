@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('person_id')->constrained('people')->onDelete('cascade');
             $table->enum('type', ['residential', 'commercial']);
-            $table->string('zipcode');
+            $table->string('zip_code');
             $table->string('street');
             $table->string('number');
             $table->string('complement')->nullable();
