@@ -8,6 +8,14 @@ class StorePersonRequest extends BaseRequest
         return true;
     }
 
+    public function prepareForValidation()
+    {
+        $this->merge([
+            'cpf' => preg_replace('/\D/', '', $this->cpf),
+            'phone' => preg_replace('/\D/', '', $this->phone)
+        ]);
+    }
+
     public function rules(): array
     {
         return [
@@ -16,7 +24,7 @@ class StorePersonRequest extends BaseRequest
             'cpf' => 'required|string|size:11|unique:people',
             'father_name' => 'nullable|string|max:255',
             'mother_name' => 'nullable|string|max:255',
-            'phone' => 'nullable|string|max:11',
+            'phone' => 'nullable|string|size:11',
             'email' => 'required|string|email|max:255|unique:people'
         ];
     }

@@ -12,7 +12,7 @@ class AddressResource extends JsonResource
             'id' => $this->id,
             'person_id' => $this->person_id,
             'type' => $this->type,
-            'zipcode' => $this->zipcode,
+            'zip_code' => $this->zip_code,
             'street' => $this->street,
             'number' => $this->number,
             'complement' => $this->complement,
@@ -20,6 +20,7 @@ class AddressResource extends JsonResource
             'state' => $this->state,
             'city' => $this->city,
             'is_active' => $this->is_active,
+            'updated_at' => $this->updated_at,
         ];
     }
 }

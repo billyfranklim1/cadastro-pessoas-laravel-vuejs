@@ -16,7 +16,7 @@ class UpdateAddressRequest extends BaseRequest
     {
         return [
             'type' => 'sometimes|in:residential,commercial',
-            'zipcode' => 'sometimes|string|max:10',
+            'zip_code' => 'sometimes|string|max:10',
             'street' => 'sometimes|string|max:255',
             'number' => 'sometimes|string|max:10',
             'complement' => 'nullable|string|max:255',

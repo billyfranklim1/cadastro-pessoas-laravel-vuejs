@@ -32,4 +32,5 @@ class AddressController extends Controller
         $address = $this->addressService->getActiveAddress($personId);
         return new AddressResource($address);
     }
+
 }

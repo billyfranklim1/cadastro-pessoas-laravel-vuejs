@@ -20,7 +20,7 @@ class StoreAddressRequest extends BaseRequest
         return [
             'person_id' => 'required|exists:people,id',
             'type' => 'required|in:residential,commercial',
-            'zipcode' => 'required|string|max:10',
+            'zip_code' => 'required|string|max:10',
             'street' => 'required|string|max:255',
             'number' => 'required|string|max:10',
             'complement' => 'nullable|string|max:255',

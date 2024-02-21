@@ -13,9 +13,9 @@ class PersonService
         $this->personRepository = $personRepository;
     }
 
-    public function getAllPeople()
+    public function getAllPeople(array $filters = [])
     {
-        return $this->personRepository->getAll();
+        return $this->personRepository->getAll($filters);
     }
 
     public function createPerson(array $data)

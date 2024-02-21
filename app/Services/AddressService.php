@@ -35,6 +35,7 @@ class AddressService
         $this->addressRepository->desactivateAllAddresses($personId);
 
         $data['person_id'] = $personId;
+        $data['is_active'] = true;
         return $this->addressRepository->create($data);
     }
 

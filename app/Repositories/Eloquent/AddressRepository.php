@@ -14,7 +14,7 @@ class AddressRepository implements AddressRepositoryInterface
 
     public function findAddressesByPersonId($personId)
     {
-        return Address::where('person_id', $personId)->orderBy('is_active', 'desc')->get();
+        return Address::where('person_id', $personId)->orderBy('id', 'desc')->get();
     }
 
     public function activateAddress($addressId, $personId)

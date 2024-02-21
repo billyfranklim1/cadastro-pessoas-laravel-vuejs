@@ -8,6 +8,7 @@ use App\Http\Requests\PersonRequest;
 use App\Http\Resources\PersonResource;
 use App\Services\PersonService;
 use Illuminate\Http\Response;
+use Illuminate\Http\Request;
 
 class PersonController extends Controller
 {
@@ -18,9 +19,9 @@ class PersonController extends Controller
         $this->personService = $personService;
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $people = $this->personService->getAllPeople();
+        $people = $this->personService->getAllPeople($request->all());
         return PersonResource::collection($people);
     }
 

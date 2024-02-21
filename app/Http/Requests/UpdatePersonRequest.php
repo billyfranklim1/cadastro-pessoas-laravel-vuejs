@@ -12,9 +12,14 @@ class UpdatePersonRequest extends BaseRequest
         return true;
     }
 
+
     public function prepareForValidation()
     {
-        $this->merge(['person' => $this->route('person')]);
+        $this->merge([
+            'cpf' => preg_replace('/\D/', '', $this->cpf),
+            'phone' => preg_replace('/\D/', '', $this->phone),
+            'person' => $this->route('person')
+        ]);
     }
 
     public function rules(): array
@@ -25,7 +30,7 @@ class UpdatePersonRequest extends BaseRequest
             'cpf' => 'sometimes|string|size:11|unique:people,cpf,' . $this->person,
             'father_name' => 'nullable|string|max:255',
             'mother_name' => 'nullable|string|max:255',
-            'phone' => 'nullable|string|max:15',
+            'phone' => 'nullable|string|size:11',
             'email' => 'sometimes|string|email|max:255|unique:people,email,' . $this->person
         ];
     }
