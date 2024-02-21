@@ -50,7 +50,7 @@ Accept: application/json
 
 {
   "type": "residential",
-  "zipcode": "123456",
+  "zip_code": "123456",
   "street": "Main St",
   "number": "123",
   "complement": "Apt 1",
