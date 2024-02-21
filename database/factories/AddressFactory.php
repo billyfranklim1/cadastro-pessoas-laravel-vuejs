@@ -19,7 +19,7 @@ class AddressFactory extends Factory
         return [
             'person_id' => \App\Models\Person::factory(),
             'type' => $this->faker->randomElement(['residential', 'commercial']),
-            'zipcode' => $this->faker->postcode,
+            'zip_code' => $this->faker->postcode,
             'street' => $this->faker->streetName,
             'number' => $this->faker->buildingNumber,
             'complement' => $this->faker->secondaryAddress,

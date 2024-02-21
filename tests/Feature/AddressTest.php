@@ -17,7 +17,7 @@ class AddressTest extends TestCase
 
         $addressData = [
             'type' => 'residential',
-            'zipcode' => '123456',
+            'zip_code' => '123456',
             'street' => 'Main St',
             'number' => '123',
             'complement' => 'Apt 1',
@@ -47,7 +47,7 @@ class AddressTest extends TestCase
                 '*' => [
                     'id',
                     'type',
-                    'zipcode',
+                    'zip_code',
                     'street',
                     'number',
                     'complement',
@@ -73,7 +73,7 @@ class AddressTest extends TestCase
         $response->assertJsonFragment([
             'id' => $activeAddress->id,
             'type' => $activeAddress->type,
-            'zipcode' => $activeAddress->zipcode,
+            'zip_code' => $activeAddress->zip_code,
             'street' => $activeAddress->street,
             'number' => $activeAddress->number,
             'complement' => $activeAddress->complement,
