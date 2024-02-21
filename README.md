@@ -75,6 +75,19 @@ dump.sql
 ## Atenção: 🚨
 É altamente recomendável que você execute as migrações e seeds para garantir que o banco de dados esteja configurado corretamente. O dump SQL é fornecido apenas como uma alternativa para popular o banco de dados com dados de exemplo.
 
+## Configuração do Front-end 🖥️
+
+Para configurar o front-end, abra um novo terminal e execute o seguinte comando:
+    
+```bash
+    ./vendor/bin/sail npm install
+```
+
+e depois:
+
+```bash
+    ./vendor/bin/sail npm run dev
+```
 
 ## Como Rodar os Testes 🧪
 
@@ -89,20 +102,7 @@ Se tudo estiver configurado corretamente, você verá a saída dos testes no ter
   <img src="public/tests.png" alt="Testes de Integração" />
 </p>
 
-<!-- configuração do front-end -->
-## Configuração do Front-end 🖥️
 
-Para configurar o front-end, abra um novo terminal e execute o seguinte comando:
-    
-```bash
-    ./vendor/bin/sail npm install
-```
-
-e depois:
-
-```bash
-    ./vendor/bin/sail npm run dev
-```
 
 ## Acessando a Aplicação 🌐
 
