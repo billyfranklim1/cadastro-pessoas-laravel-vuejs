@@ -60,6 +60,12 @@ Execute as migrações para criar as tabelas no banco de dados 🗃️:
 ./vendor/bin/sail artisan migrate
 ```
 
+Se desejar, você pode popular o banco de dados com dados de exemplo executando as seeds:
+
+```bash
+./vendor/bin/sail artisan db:seed
+```
+
 Ou, se preferir, você rodar o dump SQL que está na raiz do projeto:
     
 ```bash
@@ -73,6 +79,11 @@ Execute os testes de integração com:
 ```bash
 ./vendor/bin/sail artisan test
 ```
+
+Se tudo estiver configurado corretamente, você verá a saída dos testes no terminal semelhante à imagem abaixo:
+<p align="center">
+  <img src="public/tests.png" alt="Testes de Integração" />
+</p>
 
 <!-- configuração do front-end -->
 ## Configuração do Front-end 🖥️
