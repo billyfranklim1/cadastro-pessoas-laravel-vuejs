@@ -39,7 +39,7 @@ cp .env.example .env
 Inicie os contêineres Docker com Laravel Sail 🐳:
 
 ```bash
-./vendor/bin/sail up -d
+./vendor/bin/sail up --build
 ```
 
 Instale as dependências do projeto:
