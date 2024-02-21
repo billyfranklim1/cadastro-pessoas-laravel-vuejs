@@ -63,7 +63,7 @@ Execute as migrações para criar as tabelas no banco de dados 🗃️:
 Ou, se preferir, você rodar o dump SQL que está na raiz do projeto:
     
 ```bash
-./vendor/bin/sail mysql -u sail -p -D sail < dump.sql
+dump.sql
 ```
 
 ## Como Rodar os Testes 🧪
@@ -74,9 +74,29 @@ Execute os testes de integração com:
 ./vendor/bin/sail artisan test
 ```
 
+<!-- configuração do front-end -->
+## Configuração do Front-end 🖥️
+
+Para configurar o front-end, abra um novo terminal e execute o seguinte comando:
+    
+```bash
+    ./vendor/bin/sail npm install
+```
+
+e depois:
+
+```bash
+    ./vendor/bin/sail npm run dev
+```
+
 ## Acessando a Aplicação 🌐
 
-A API estará acessível através do `http://localhost`.
+A API estará acessível através do `http://localhost:80`.
+
+Se tudo estiver configurado corretamente, você verá a página inicial como a imagem abaixo:
+<p align="center">
+  <img src="public/capture.png" alt="Página Inicial" />
+</p>
 
 ## Possíveis Erros e Soluções 🛠️
 
