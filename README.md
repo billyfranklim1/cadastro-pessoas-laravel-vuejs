@@ -71,6 +71,10 @@ Ou, se preferir, você rodar o dump SQL que está na raiz do projeto:
 ```bash
 dump.sql
 ```
+<!-- add alerta que é aconselhável rodar via migrations e seeds com emojis de atenção -->
+## Atenção: 🚨
+É altamente recomendável que você execute as migrações e seeds para garantir que o banco de dados esteja configurado corretamente. O dump SQL é fornecido apenas como uma alternativa para popular o banco de dados com dados de exemplo.
+
 
 ## Como Rodar os Testes 🧪
 
