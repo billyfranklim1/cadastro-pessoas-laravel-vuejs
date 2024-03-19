@@ -2,9 +2,20 @@
 
 Este projeto é uma API desenvolvida com Laravel, utilizando Laravel Sail para facilitar a configuração e execução em ambientes Docker 🐳. O foco está em fornecer uma solução eficiente para o cadastro e gerenciamento de pessoas 🧑‍🤝‍🧑, acompanhado de testes de integração para garantir a qualidade e confiabilidade do software 🎯.
 
+## Demonstração 📺
+Você pode acessar a aplicação em execução no link https://cadastros.billy.dev.br
+
+## Tecnologias Utilizadas 🛠️
+- [Laravel](https://laravel.com/)
+- [VueJS](https://vuejs.org/)
+- [Vuetify](https://vuetifyjs.com/)
+- [MySQL](https://www.mysql.com/)
+
 ## Pré-requisitos ✅
 
-Antes de começar, certifique-se de ter o Docker 🐳 instalado em sua máquina. Para usuários Windows ou Mac, o Docker Desktop é recomendado. Para usuários Linux, instale o Docker Engine e Docker Compose seguindo a documentação oficial.
+- Docker / Docker Desktop / Docker Engine e Docker Compose 🐳
+- Composer 
+- Node.js (Versão mais recente)
 
 **Importante:** Laravel Sail utiliza a porta `3306` para o MySQL por padrão. Certifique-se de que esta porta esteja disponível 🚦 ou ajuste a configuração conforme necessário.
 
@@ -36,16 +47,16 @@ Copie o arquivo `.env.example` para `.env` para configurar o ambiente:
 cp .env.example .env
 ```
 
+Execute o comando abaixo para instalar as dependências do Laravel:
+
+```bash
+composer install --ignore-platform-reqs
+```
+
 Inicie os contêineres Docker com Laravel Sail 🐳:
 
 ```bash
 ./vendor/bin/sail up --build
-```
-
-Instale as dependências do projeto:
-
-```bash
-./vendor/bin/sail composer install
 ```
 
 Gere a chave da aplicação Laravel 🔑:
